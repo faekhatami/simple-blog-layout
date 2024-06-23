@@ -6,40 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="container">
+                <h1 class="logo">Simple Blog</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <article>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Post Image">
             <h2>Blog Post Title 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque eleifend justo, nec interdum
                 odio tincidunt
                 at.</p>
+            <a href="#" class="read-more">Read More</a>
         </article>
         <article>
-            <h2>Blog Post Tilte 2</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Post Image">
+            <h2>Blog Post Title 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque eleifend justo, nec interdum
                 odio tincidunt
                 at.</p>
+            <a href="#" class="read-more">Read More</a>
         </article>
         <article>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Post Image">
             <h2>Blog Post Title 3</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque eleifend justo, nec interdum
                 odio tincidunt
                 at.</p>
+            <a href="#" class="read-more">Read More</a>
         </article>
     </main>
     <footer>
-        <p>&copy; 2024 Simple Blog</p>
+        <div class="container">
+            <p>&copy; 2024 Simple Blog</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 

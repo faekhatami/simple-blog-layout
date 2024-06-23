@@ -9,6 +9,14 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 header {
@@ -17,10 +25,21 @@ header {
     padding: 1rem 0;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
 }
 
 header nav ul li {
@@ -31,10 +50,16 @@ header nav ul li {
 header nav ul li a {
     color: var(--text-color);
     text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
 }
 
 main {
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 article {
@@ -42,10 +67,35 @@ article {
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
 }
 
 article h2 {
     margin-top: 0;
+}
+
+article p {
+    line-height: 1.8;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: var(--primary-color);
 }
 
 footer {
@@ -53,7 +103,31 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+footer ul li a {
+    color: var(--background-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: var(--primary-color);
 }
