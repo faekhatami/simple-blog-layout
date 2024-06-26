@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -14,7 +14,8 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -23,6 +24,7 @@ header {
     background-color: var(--background-color);
     color: var(--text-color);
     padding: 1rem 0;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 header nav {
@@ -36,14 +38,28 @@ header .logo {
     font-weight: 700;
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 header nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
@@ -59,15 +75,22 @@ header nav ul li a:hover {
 }
 
 main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     padding: 2rem 0;
 }
 
 article {
     background-color: var(--background-color);
-    margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+article:hover {
+    transform: translateY(-10px);
 }
 
 article img {
@@ -103,6 +126,7 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 1rem 0;
+    border-top: 1px solid var(--primary-color);
 }
 
 footer .container {
@@ -115,19 +139,43 @@ footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 footer ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
 footer ul li a {
-    color: var(--background-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 footer ul li a:hover {
     color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
 }
